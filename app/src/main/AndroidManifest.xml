@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logoss"
+        android:label="cashleaf"
+        android:roundIcon="@drawable/logoss"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Financetracker"
+        tools:targetApi="31">
+        <activity
+            android:name="com.example.cashleaf.GetStarted"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.SignUp"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.SignIn"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.Onboard3"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.Onboard2"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.Onboard1"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.TransactionsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.SetBudgetActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.EditTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.DeleteTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.AddTransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.ui.BudgetActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cashleaf.Logo"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Financetracker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.example.cashleaf.notification.ReminderReceiver" />
+    </application>
+
+</manifest>
